@@ -1,0 +1,2 @@
+include ':AppCalculadoraParaIdosos'
+rootProject.name = "AppCalculadoraParaIdosos"
