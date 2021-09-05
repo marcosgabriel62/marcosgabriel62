@@ -1,4 +1,10 @@
 <?php
+
+function calcular ($a){
+	$a = +10;	
+	return $a;
+}
+
 /*echo "instrução php";
 echo "<br>";
 $soma = 2+2;
@@ -17,6 +23,43 @@ echo $nome;
 echo "valor do parametro nome: " .$_GET['campo1'];
 echo "<br>";
 echo "valor do parametro telefone: " .$_GET['campo2'];
+define ("NOME", "Marco véio");
+echo "<br>";
+echo NOME;
+
+$soma = 1;
+$soma-=$soma -1;
+
+//concatenação de string
+$texto = "hoje vai chover";
+$texto .= "muito";
+echo "<br>";
+echo $texto;
+
+if (1==1)//igual
+{
+	echo "<br>";
+	echo "1 igual 1";
+}
+
+if (1!=2)//diferente
+{
+	echo "<br>";
+	echo "1 diferente 1";
+}
+
+echo "<br>";
+$a = 1;
+$b = 1;
+echo $a/$b ==1 ? "o resultado é ==1" : "o resultado é !=1";
+
+echo "<br>";
+echo calcular(100);
+
+
+ 
+
+
 ?>
 
 
