@@ -3,9 +3,11 @@
 #include <stdbool.h>
 
 // configuração do tabuleiro
+
 #define _ALTURA_    10
 #define _LARGURA_   10
 #define _QT_BOMBAS_ 20
+int N = _ALTURA_;
 
 // visualização do tabuleiro
 #define _ABERTA_   0
@@ -28,6 +30,11 @@
    -1 tem bomba!
 
 */
+
+int idx(int Linha, int Coluna, int Largura)
+{
+	return ( Linha * Largura + Coluna );
+}
 
 void InicializaTabuleiro( int TabVisualiz[_ALTURA_][_LARGURA_],
                           int TabConteudo[_ALTURA_][_LARGURA_] )
@@ -65,7 +72,8 @@ void InicializaTabuleiro( int TabVisualiz[_ALTURA_][_LARGURA_],
 
     //contagem
     int contaBombas = 0;
-    for(L=0; L < _ALTURA_; L++)
+    
+    for(L=0; L < _LARGURA_; L++)
     {
         for(C=0; C < _LARGURA_; C++)
         {
@@ -76,14 +84,21 @@ void InicializaTabuleiro( int TabVisualiz[_ALTURA_][_LARGURA_],
                if(L > 0)               if(TabConteudo[L - 1][C] == _BOMBA_) contaBombas++; // cima
                if(L < (_ALTURA_  - 1)) if(TabConteudo[L + 1][C] == _BOMBA_) contaBombas++; // baixo
                if(C < (_LARGURA_ - 1)) if(TabConteudo[L][C + 1] == _BOMBA_) contaBombas++; // direita
-               if(C > 0)               if(TabConteudo[L][C - 1] == _BOMBA_) contaBombas++; // esquerda
+               if(C > 0)               if(TabConteudo[L][C - 1] == _BOMBA_) contaBombas++; // esquerda              
+			   if(L > 0 && C < (N-1))  if(TabConteudo[idx(L-1,   C+1, N)] == _BOMBA_) contaBombas++;	// diag sup dir
+			   if(L > 0 && C > 0 )     if(TabConteudo[idx(L-1,   C-1, N)] == _BOMBA_) contaBombas++;	// diag sup esq
+			   if(L < (N-1) && C < (N-1)) if(TabConteudo[idx(L+1,   C+1, N)] == _BOMBA_) contaBombas++;	// diag inf dir
+			   if(L < (N-1) && C > 0)  if(TabConteudo[idx(L+1,   C-1, N)] == _BOMBA_) contaBombas++;	// diag inf esq
+			
+
+
 
                TabConteudo[L][C] = contaBombas;
             }
         }
 
     }
-
+   
 }
 
 void MostraTabuleiro( int TabVisualiz[_ALTURA_][_LARGURA_],
@@ -107,7 +122,10 @@ void MostraTabuleiro( int TabVisualiz[_ALTURA_][_LARGURA_],
         }
         printf("|\n");
     }
+    
+    
 }
+
 
 int main()
 {
@@ -121,6 +139,8 @@ int main()
     MostraTabuleiro(TabVisualiz, TabConteudo);
 
     printf("\nHello world!\n");
+    
+    
     return 0;
 }
 
