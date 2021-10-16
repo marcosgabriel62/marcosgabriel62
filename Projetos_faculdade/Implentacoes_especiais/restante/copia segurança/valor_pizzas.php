@@ -1,0 +1,5 @@
+<?php
+
+$portuguesa="20";
+
+?>
