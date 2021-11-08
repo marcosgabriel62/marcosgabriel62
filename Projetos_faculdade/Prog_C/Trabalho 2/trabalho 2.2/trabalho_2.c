@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <locale.h> 
-#define t 100
+#define t 20
 
 int main(void)
 
@@ -18,8 +18,8 @@ int main(void)
   float yb [t];
   float xdominante [t];
   float ydominante [t];
-  float xdominado [t];
-  float ydominado [t];
+  float xdominada [t];
+  float ydominada [t];
   float apoio;
   
   //gera o valor de t valores e grava em vetor
@@ -27,10 +27,7 @@ int main(void)
   for (i = 0; i < t; i++){
   	apoio = rand() % 1001;
   	xa [i] = apoio/1000;
-  	xb [i] = xa[i];
-  	apoio = rand () % 1001;
   	ya [i] = apoio/1000;
-  	yb [i] = ya [i];
   	printf("ponto em x: %f, y: %f\n", xa[i], ya[i]);	
   	}
   
@@ -46,40 +43,40 @@ int main(void)
     for (i = 0; i < t; i++){
   	fprintf (destino, "%f; %f\n", xa[i], ya[i] );
   	}
-  
-  	
-  	/*
-  	//carrega valores de x e y no arquivo .csv
-    //desta forma ele carrega no CSV o arquivo mostrando x e y numa só coluna somente para titulo de plotagem no gráfico
-    fprintf (destino, "pontos grafico\n");
-    for (i = 0; i < t; i++){
-  	fprintf (destino, "%f\n %f\n", xa[i], ya[i] );
-  	}
-  	*/
     
   	//encontra dominantes e dominadas
   	int k=0;
   	int f=0;
-  	int s=0;
+  	int j=0;
   	for (i=0; i< t; i++)
   		{
+  			double ax = xa[i];
+  			double ay = ya[i];
+  			
+  			for(k=i+1; i< t; k++){
+  			double bx = xa[k];
+  			double by = ya[k];
 	  		if(
-	  	  	  ((xa[i] < xb[k]) && (ya[i] < yb[k]))||	
-	          ((xa[i] < xb[k]) && (ya[i] == yb[k])||	
-	  	      ((xa[i] == xb[k]) && (ya[i] < yb[k]))	
-	  	      ))
+	  	  	  ((ax[k] < bx[k]) && (ay[i] < by[k]))||	
+	          ((ax[i] < bx[k]) && (ay[i] == by[k]))||	
+	  	      ((ax[i] == bx[k]) && (ay[i] < by[k]))	
+	  	      )
 	  		  {	
 			  xdominante[f]=xa[i];
-			  ydominante[f]=ya[i];		
-			  k++;
+			  ydominante[f]=ya[i];	
 			  f++;	
 		      }
-		      else
-		      {
-			  xdominado[s]=xa[i];
-			  ydominado[s]=ya[i];
-			  s++;
-			  }
+			  
+			  if(
+	  	  	  ((xa[i] > xb[k]) && (ya[i] > yb[k]))||	
+	          ((xa[i] > xb[k]) && (ya[i] == yb[k]))||	
+	  	      ((xa[i] == xb[k]) && (ya[i] > yb[k]))	
+	  	      )
+	  		  {	
+			  xdominada[j]=xa[i];
+			  ydominada[j]=ya[i];	
+			  j++;	
+		      }      
 		}
 
     //cria novo arquivo txt
@@ -97,10 +94,10 @@ int main(void)
     
   //printa na tela as dominadas	
   fprintf (destino2, "Dominadas: \n");		
-  for (i=0; i< s; i++)
+  for (i=0; i< j; i++)
   		{
-  		printf("dominadas: x: %f, y: %f\n", xdominado[i], ydominado[i]);
-		fprintf (destino2, "%f; %f\n", xdominado[i], ydominado[i] );   		
+  		printf("dominadas: x: %f, y: %f\n", xdominada[i], ydominada[i]);
+		fprintf (destino2, "%f; %f\n", xdominada[i], ydominada[i] );   		
 		}	
 			
   getch();
