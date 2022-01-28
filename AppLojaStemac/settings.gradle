@@ -1,2 +1,0 @@
-include ':applojastemac'
-rootProject.name = "AppLojaStemac"
