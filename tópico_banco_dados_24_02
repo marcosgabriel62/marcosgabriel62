@@ -7,7 +7,6 @@ constraint PK_Departamento_codigo primary key (codDepto),
 constraint UN_Depto_nome unique (nome)
 );
 
-
 create table Emp (    
 codEmp number (10) not null,
 dataAdmissao date,
@@ -39,5 +38,11 @@ constraint UN_Cliente_nome unique (nome),
 constraint FK_Empresa_codigo foreign key (codEmp)
 references Emp (codEmp)
 );
+
+
+
+
+
+
 
 
