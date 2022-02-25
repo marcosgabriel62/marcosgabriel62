@@ -1,0 +1,43 @@
+create table Depto (    
+codDepto number (10) not null,
+localizacao varchar2 (50),
+nome varchar2 (50),
+
+constraint PK_Departamento_codigo primary key (codDepto),
+constraint UN_Depto_nome unique (nome)
+);
+
+
+create table Emp (    
+codEmp number (10) not null,
+dataAdmissao date,
+nome varchar2 (50),
+funcao varchar2 (50),
+salario number (10, 2),
+gerente number (10),
+codDepto number (10),
+
+constraint PK_Empresa_codigo primary key (codEmp),
+constraint UN_Emp_nome unique (nome),
+constraint FK_Departamento_codigo foreign key (codDepto)
+references Depto (codDepto)
+);
+
+create table cliente (
+nome varchar2 (80),
+limCredito number (10, 2),
+codCli number (10) not null,
+endereco varchar2 (80),
+telefone varchar2 (30),
+cep varchar2 (20),
+cidade varchar (50),
+estado varchar (50),
+codEmp number (10),
+
+constraint PK_Cliente_codigo primary key (codCli),
+constraint UN_Cliente_nome unique (nome),
+constraint FK_Empresa_codigo foreign key (codEmp)
+references Emp (codEmp)
+);
+
+
