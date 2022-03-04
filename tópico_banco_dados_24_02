@@ -39,6 +39,16 @@ constraint FK_Empresa_codigo foreign key (codEmp)
 references Emp (codEmp)
 );
 
+insert into Depto (codDepto, localizacao, nome) values (1, '61416 Cambridge Trail', 'direção');
+insert into Depto (codDepto, localizacao, nome) values (2, '61416 Cambridge Trail', 'gerencia');
+insert into Depto (codDepto, localizacao, nome) values (3, '61416 Cambridge Trail', 'almoxarifado');
+insert into Depto (codDepto, localizacao, nome) values (4, '61416 Cambridge Trail', 'compras');
+insert into Depto (codDepto, localizacao, nome) values (5, '61416 Cambridge Trail', 'orçamentos');
+insert into Depto (codDepto, localizacao, nome) values (6, '61416 Cambridge Trail', 'suprimentos');
+insert into Depto (codDepto, localizacao, nome) values (7, '61416 Cambridge Trail', 'engenharia');
+
+
+
 
 
 
