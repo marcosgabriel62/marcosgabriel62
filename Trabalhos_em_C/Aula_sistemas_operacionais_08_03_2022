@@ -1,3 +1,7 @@
+//código precisa mostrar as letras da matriz
+//codigo consegue lidar com linhas e colunas da esquerda para direita e de 
+//cima para baixo e o novo codigo terá de ser de cima para baixo lendo todas as colunas de cima para baixo e então para a direita
+
 #include <stdio.h>
 #include <stdlib.h>
 
