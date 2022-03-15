@@ -9,8 +9,7 @@
 #include <string.h>
 #include <time.h>
 
-#define N 2000
-
+#define N 3
 
 void SalvaMatriz(int Altura, int Largura, int* M, char* Titulo, char* NomeArquivo)
 {
@@ -121,10 +120,11 @@ int main()
         }
     }
 
-	double tempoProcessamento = ((double)tempo) / (double)(CLOCKS_PER_SEC/1000);
+	clock_t final = clock();
+	double tempoProcessamento = ((double)(final-tempo)) / (double)(CLOCKS_PER_SEC);
 	
 	printf("Calculation is done! Now saving data on the disc...\n");
-    //MostraMatriz(N, N, Mc, " Matriz C ");
+    //MostraMatriz(N, N, Mc, " Matriz C \n");
     printf("Saving Matriz A on disc...\n");
 	//SalvaMatriz(N, N, Ma, "::: Matriz A :::", "matrizA.txt");
     printf("Saving Matriz B on disc...\n");
