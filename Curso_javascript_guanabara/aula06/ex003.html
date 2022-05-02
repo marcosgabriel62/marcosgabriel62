@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first program</title>
+    <style>
+        body {
+            background-color: rgb(46, 46, 165);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1{
+            color: yellow;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Óla, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+
+        //resultado dará erro pois será concatenação e não soma de variaveis int
+        var n1 = window.prompt('Digite um numero:');//vai perguntar um numero
+        var n2 = window.prompt('Digite outro numero:');//vai perguntar um numero
+        var n3 = n1+n2;
+        window.alert ('A soma dos valores é ' +n3);//concatenação
+        
+        //+ pode concatenar ou somar
+        //number + number = soma
+        //string + string = concatenação
+        //window.prompt retorna string sempre
+
+        //convertendo separado
+        var n1 = window.prompt('Digite um numero:');//vai perguntar um numero
+        var n2 = window.prompt('Digite outro numero:');//vai perguntar um numero
+        var n11 = parseInt(n1);
+        var n22 = parseInt(n2);
+        var n3 = n11+n22;
+        window.alert ('A soma dos valores é ' +n3);//soma
+        
+        //convertendo direto na entrada
+        var n1 = Number.parseInt(window.prompt('Digite um numero:'));//vai perguntar um numero
+        var n2 = Number.parseInt(window.prompt('Digite outro numero:'));//vai perguntar um numero
+        var n3 = n1+n2;
+        window.alert ('A soma dos valores é ' +n3);//soma
+
+    </script>
+</body>
+</html>
