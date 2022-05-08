@@ -1,0 +1,54 @@
+//código precisa mostrar as letras da matriz
+//codigo consegue lidar com linhas e colunas da esquerda para direita e de 
+//cima para baixo e o novo codigo terá de ser de cima para baixo lendo todas as colunas de cima para baixo e então para a direita
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define h 3
+#define w 3
+
+void mostraMatriz(int*m)
+{
+    int l, c;
+    for (l=0; l<h; l++)
+    {
+        for (c=0;c<w;c++)
+        {
+            printf("%2d", m[l*w+c]);    
+        }
+    printf ("\n");    
+    }
+    
+}
+    
+int main()
+{
+    int *m = (int*)malloc(sizeof(int)*h*w);
+    if(m==NULL)
+        {
+        printf ("\nErro de memoria!\n");
+        return(-1);
+        }
+        
+int l, c, cont=0;
+
+//popula matriz
+
+for (l=0; l<h; l++)
+    {
+        for (c=0;c<w;c++)
+            {
+                m[l*w+c] = cont;
+                cont++;
+            }
+    }
+
+mostraMatriz(m);
+}
+
+
+
+
+    
+

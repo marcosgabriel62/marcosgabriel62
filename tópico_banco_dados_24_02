@@ -1,0 +1,80 @@
+create table Depto (    
+codDepto number (10) not null,
+localizacao varchar2 (50),
+nome varchar2 (50),
+
+constraint PK_Departamento_codigo primary key (codDepto),
+constraint UN_Depto_nome unique (nome)
+);
+
+create table Emp (    
+codEmp number (10) not null,
+dataAdmissao date,
+nome varchar2 (50),
+funcao varchar2 (50),
+salario number (10, 2),
+gerente number (10),
+codDepto number (10),
+
+constraint PK_Empresa_codigo primary key (codEmp),
+constraint UN_Emp_nome unique (nome),
+constraint FK_Departamento_codigo foreign key (codDepto)
+references Depto (codDepto)
+);
+
+create table cliente (
+nome varchar2 (80),
+limCredito number (10, 2),
+codCli number (10) not null,
+endereco varchar2 (80),
+telefone varchar2 (30),
+cep varchar2 (20),
+cidade varchar (50),
+estado varchar (50),
+codEmp number (10),
+
+constraint PK_Cliente_codigo primary key (codCli),
+constraint UN_Cliente_nome unique (nome),
+constraint FK_Empresa_codigo foreign key (codEmp)
+references Emp (codEmp)
+);
+
+insert into Depto (codDepto, localizacao, nome) values (1, '123456 Cambridge A', 'Direção');
+insert into Depto (codDepto, localizacao, nome) values (2, '789101 Cambridge B', 'Gerencia');
+insert into Depto (codDepto, localizacao, nome) values (3, '444555 Cambridge C', 'Almoxarifado');
+insert into Depto (codDepto, localizacao, nome) values (4, '26105 Cambridge D', 'Compras');
+insert into Depto (codDepto, localizacao, nome) values (5, '99888 Cambridge E', 'Orçamentos');
+insert into Depto (codDepto, localizacao, nome) values (6, '44445 Cambridge F', 'Suprimentos');
+insert into Depto (codDepto, localizacao, nome) values (7, '112345 Cambridge G', 'Engenharia');
+
+SELECT *
+FROM Depto
+
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (1, TO_DATE('22/June/2015 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Fulano de tal', 'Diretor', 10500, 1, 1);
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (2, TO_DATE('22/April/2011 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Ciclano de tal', 'Vendedor', 3500, 2, 5);
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (3, TO_DATE('22/May/2009 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Beltrano de tal', 'Comprador', 3500, 3, 6);
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (4, TO_DATE('22/January/2011 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Marcos de tal', 'Engenheiro', 7500, 4, 7);
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (5, TO_DATE('22/April/2011 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Junior de tal', 'Almoxarife', 1500, 5, 3);
+insert into Emp (codEmp, dataAdmissao, nome, funcao, salario, gerente, codDepto) values (6, TO_DATE('21/April/1996 8:30:00AM','DD/MON/YY HH:MI:SSAM'), 'Pedro de tal', 'Vendedor', 3500, 6, 5);
+
+SELECT *
+FROM Emp
+
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('joão de barro', 3500.50, 1, 'avenida de tal 123', '51 9 9633 5970', '91180-520', 'porto alegre', 'RS', 1);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('pedro de tal', 2500.00, 2, 'rua de tal 456', '51 9 9633 5971', '91170-170', 'cachoeirinha', 'RS', 2);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('ciclano de tal', 4500.00, 3, 'alameda de tal 789', '51 9 9633 5972', '94960-852', 'mostardas', 'am', 3);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('marcos da deep web', 2500.17, 5, 'praça de tal 123', '51 9 9633 5974', '94960-000', 'sapucaia do sul', 'rj', 5);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('adriano de tal', 44400.00, 6, 'rua da amargura 123', '51 9 9633 5975', '91180-000', 'gravatai', 'pr', 6);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('andré de tal', 100.00, 7, 'avenida da pamonha 123', '51 9 9633 5976', '90000-000', 'glorinha', 'sc', 6);
+insert into cliente (nome, limCredito, codCli, endereco, telefone, cep, cidade, estado, codEmp) values ('marcola', 10500.00, 4, 'beco de tal 123', '51 9 9633 5973', '91170-000', 'novo hamburgo', 'pe', 4);
+
+SELECT *
+FROM cliente
+
+
+
+
+
+
+
+
