@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include <locale.h> 
 
 int wordscounter(char *word, char *letter){
 
@@ -20,11 +19,11 @@ for (i=0; i<r; i++)
 	
 }
 
-
 int main ()
 {
 	char word[] = "racecar";
-	char letter []= "r";
+	char letter [1]= "r";
 	wordscounter(word, letter);
+	return 0;
 
 }

@@ -28,7 +28,7 @@
         var n2 = window.prompt('Digite outro numero:');//vai perguntar um numero
         var n3 = n1+n2;
         window.alert ('A soma dos valores é ' +n3);//concatenação
-        
+
         //+ pode concatenar ou somar
         //number + number = soma
         //string + string = concatenação
@@ -42,11 +42,23 @@
         var n3 = n11+n22;
         window.alert ('A soma dos valores é ' +n3);//soma
         
-        //convertendo direto na entrada
+        //convertendo direto na entrada para um numero real inteiro
         var n1 = Number.parseInt(window.prompt('Digite um numero:'));//vai perguntar um numero
         var n2 = Number.parseInt(window.prompt('Digite outro numero:'));//vai perguntar um numero
         var n3 = n1+n2;
         window.alert ('A soma dos valores é ' +n3);//soma
+
+        //convertendo direto na entrada para numero float
+        var n1 = Number.parseFloat(window.prompt('Digite um numero:'));//vai perguntar um numero
+        var n2 = Number.parseFloat(window.prompt('Digite outro numero:'));//vai perguntar um numero
+        var n3 = n1+n2;
+        window.alert ('A soma dos valores é ' +n3);//soma
+
+        //convertendo direto na entrada e deixando que o javascript se vire
+        var n1 = Number(window.prompt('Digite um numero:'));//vai perguntar um numero
+        var n2 = Number(window.prompt('Digite outro numero:'));//vai perguntar um numero
+        var n3 = n1+n2;
+        window.alert (`A soma entre ${n1} e ${n2} é igual a ${n3}`);//soma
 
     </script>
 </body>
