@@ -4,5 +4,5 @@
 	session_start();
 
     # Direciona a página pra tela de login
-	header('Location: http://localhost/pizzaria/login.php');
+	header('Location: http://pizzarianaweb.webcindario.com/web/pizzaria/login.php');
 ?>
