@@ -1,0 +1,67 @@
+Cloud computing se refere a entrega de recursos de TI e aplicações via internet
+Antigamente empresas precisavam projetar data-centers e se tornava muito custoso deixar
+muita estrutura ociosa para que pudesse suprir a demanda durante um pico de uso ou se o pico
+fosse muito maior do que a disponibilidade isso também trazia problemas
+
+Cloud computing permite elasticamente dar mais ou menos poder de computação a uma aplicação
+ou serviço sem precisar necessariamente deixar todo aquele poder de processamento reservado
+sempre a aquela aplicação ou serviço.
+
+Com AWS toda essa flexibilidade e uma grande gama de produtos, tratando se de infraestrutura
+de TI, e todas essas ferramentas podem ser acessadas em segundos
+
+Com AWS os riscos são diminuidos, os recursos são automaticamente escalados para a demanda 
+de acesso no momento e tornamos as aplicações extremamente confiaves mesmo em caso de 
+desastres da natureza 
+
+Computação na nuvem pode ajudar a reduzir os riscos envolvidos no desenvolvimento agil tendo
+em vista que é rapidamente adaptavel e permissiva a mudança, diminuindo os custos envolvidos
+em alterações e mudanças.
+
+Como não são estruturas fisicas compradas para determinada finalidade os custos envolvidos em 
+destinar recursos para a compra desses equipamentos e o projeto ou aplicação não se mostrar 
+viavel com o tempo também são diminuidos.
+
+computação na nuvem permite que empresas respondam rapidamente a mudanças nas caracteristicas
+do mercado em que elas atuam.
+
+é possivel que entregas de software sejam automatizadas criando segurança e diminuindo os 
+riscos com compliance
+
+Uma das vantagens chave da AWS é o uso dos serviços sob demanda
+
+Escalabilidade em computação na nuvem significa mudar a quantidade de recursos necessarios
+quando for conveniente.
+
+A nuvem AWS entrega uma plataforma de computação escalavel projetada para alta 
+disponibilidade e confiabilidade fornecendo ferramentas para ajudar você a utilizar uma
+vasta gama de aplicações.
+
+Empresas estão indo para nuvem pois isso aumenta a agilidade 
+os tres fatores principais são o aumento da velocidade, a facilidade de testar e a
+cultivação de uma cultura de inovação.
+
+Como computação na nuvem pode ajudar empresas a serem mais ágeis?
+
+O preço de colocar data centers onde os consumidores estão pode ser proibitivo, especiamente
+se eles estiverem espalhados por todo mundo. Mas, a AWS pode ajudar nisso mesmo sem 
+necessitar de um custo tão grande no seu uso. Isso por que há instalações da AWS no mundo 
+inteiro. Você pode ter alcançe global de ferramentas e recuros em minutos 
+com apenas alguns cliques. 
+
+Com AWS você pode colocar servidores no ar em minutos e neste mesmo tempo tira-los do ar
+ou mudar seu proposito.
+
+AWS Auto Scaling and Elastic Load Balancing - Ferramenta da AWS para uso de 
+computação conforme demanda
+
+----------------------------------------
+
+Há tres formas de usar os recursos de computação na nuvem da AWS:
+
+AWS managment control - Interface grafica para acesso dos recuros
+CLI or comand line interface	- Interface para uso via linha de comando
+SDKs or Software Development Kits - Permite uso de AWS em aplicações já existentes e 
+permite também a inclusão de AWS em aplicações novas
+
+

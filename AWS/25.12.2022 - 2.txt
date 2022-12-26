@@ -1,0 +1,103 @@
+Amazon EC2 = Amazon Elastic Compute Cloud
+
+Pagar somente o que precisar
+
+implantação baseada na nuvem
+Tudo é movido para a nuvem
+
+implantação no local
+nuvem local e virtualização
+
+implantação hibrida
+Recursos locais e sistemas legados integrados a nuvem 
+
+Tipos de cloud computing
+
+Iaas: Infraestrutura como serviço
+Paas: Plataforma como serviço
+Saas: Software como serviço
+
+Nuvem: Totalmente na nuvem
+Hibrida: Conecta recursos web e recursos atuais que não se encontram na nuvem
+On-premisses: Nuvem privada. Igual a infraestrutura de TI antiga. Virtualização
+
+A AWS é compatível com 98 normas de segurança e certificações de conformidade,
+e todos os 117 produtos da AWS que armazenam dados de clientes oferecem criptografia 
+de dados.
+
+vantagens on premisses vs AWS EC2
+
+Baixo investimento inicial 
+
+Servidores de alta confiabilidade e disponibilidade já operando não havendo necessidade de 
+preocupação do cliente no mantenimento desta infraestrutura
+
+Enorme quantidade de capacitade computacional apenas solicitando instancias ou parando essas
+intancias encerrando assim o custo envolvido na execução
+
+Estas instancias são executadas em um host fisico
+
+Virtualização funcionando em maquinas fisicas sendo divididas = Alocação multipla
+
+Hypervisor = Isola maquinas virtuais umas das outras
+
+Seguras e isoladas umas das outras e não é necessario configuração 
+
+Oferecem flexibilidade e controle
+
+Roda Aplicacoes internas de negocios, web apps, bancos de dados ou software de terceiros.
+
+Escabilidade vertical = Cada instancia pode ter poder de computação ajustada
+
+tipos de instancias disponíveis:
+
+Usando uma analogia seria como diferentes funcionarios de uma cafeteria como caixa, 
+barista, faxineira
+
+Uso geral: Equilibrio entre poderes de rede, memoria, rede, graficos e etc.
+Otimizada para computação: Computação intensiva, serviços de jogos, HPC (computação de alta performance), modelagem cientifica.
+Otimizada para memoria: Tarefas com uso intensivo de memoria
+Computação acelerada: Calculos de numero com ponto flutuante, Processamento Gráfico, Correspondência de padroes de dados, usa aceleradores de hardware
+Otimizada para armazenamento: Cargas de trabalho que exigem alta performance para dados armazenados localmente
+
+precificação:
+
+Sob demanda: por hora, segundo e instancia 
+Não precisa de contrato
+Pode ser usado como referencia para saber quanto vai custar usando algum dos outros planos
+
+Saving plans: pode fornecer economia de até 72% do custo pois ha compromisso com uma quantidade consistente
+de uso de computação por um periodo de um ou tres anos. 
+Uso alem do compromisso é cobrado de acordo com os preços normais de instancias sob demanda.
+
+Instancias reservadas
+São um desconto de cobrança aplicado ao uso de instancias sob demanda em sua conta
+Você pode adquirir instancias reservadas comuns e instancias conversiveis por um periodo de 
+1 ou 3 anos e instancias reservadas agendadas por um periodo de um ano
+maior economia é o plano de 3 anos
+
+se a instancia reservada acabar voce pode continuar usando sem interrupção porém com os custos de 
+uma instancia sob demanda até que você ou encerre a instancia ou reserve outra.
+
+instancia spot
+
+ideiais para trabalhos que toleram interrupções e sejam flexiveis em relação ao termino.
+economia de 90% de desconto em relação a uma instancia sob demanda
+
+ideal para um trabalho que rode em segundo plano e pode ser iniciado e interrompido quando for necessario
+por exemplo
+aws pode interromper a instancia com um prazo de 2 minutos para o encerramento e a aplicação
+deve permitir esse encerramento no processamento e o reinicio posterior quando a aws fornecer
+uma nova instancia spot.
+
+hosts dedicados
+
+servidores fisicos com capacidade de instancia do amazon ec2 totalmente dedicados ao uso do cliente
+Pode usar suas licenças de software por soquete, nucleo ou vm para manter a conformidade
+da licença
+os hosts dedicados são os mais caros
+podem ser adquiridos hosts dedicados sob demanda e reserva.
+
+
+
+

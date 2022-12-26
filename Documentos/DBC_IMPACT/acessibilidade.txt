@@ -1,0 +1,62 @@
+Marcelo Salles 
+Tudo o que você faz no dia a dia é acessibilidade
+(Você só precisa ligar os pontos)
+palestrante se auto descreveu como audio descrição pensando em quem está só ouvindo a palestra
+dismistificação
+não só direcionada a pessoas com deficiência
+problemas de acesso
+nada é óbvio pra todo mundo
+WCAG - Boas praticas de acessibilidade
+Não é ou não deveria ser ima caixinha isolada no processo. Deveria ser encaixada em todas as etapas do processo
+Descobrir -> definir -> desenvolver -> entregar ->Acessibilidade
+Não é uma feature/melhoria
+deveria ser pensada desde o inicio e não adicionada também por conta dos custos envolvidos em refatoração de código 
+depois a gente faz = ninguem faz
+por que a implementação ágil falha?
+filosofia, cultura
+falta de suporte gerencial
+falta de suporte a mudança cultural
+pressão para que o modelo tradicional seja seguido
+falta de colaboração efetiva da gestão
+empresas fisicas indo para o digital = transformação
+falta de acessibilidade em produtos ou serviços
+design inclusivo coloca a pessoa no centro e projeta de forma que o produto sirva a todos
+building for everyone
+o numero baixo de acesso de pessoas com deficiencia dificulta a justificativa de investimentos
+LBI = lei brasileira de inclusão = necessidade de inclusão por compliance
+level access
+há baixa punibilidade no caso de aplicações, produtos e serviços não acessiveis
+não fazemos acessibilidade de olho em um retorno no investimento - tim cook
+funcional para todas as pessoas
+menos de 1% dos sites brasileiros tem uma acessibilidade aceitavel
+SEO para buscadores ou pessoas?
+acessibilidade não é um tema muito conhecido e considerado, ensinado e aproveitado pelas empresas e instituições de ensino
+codificar significado ao invez de aparência para acessibilidade
+acessibilidade vai muito além de incluir pessoas com deficiência 
+é sobre design inclusivo
+affordance - ver significado
+design do dia a dia
+significante - ver significado
+acessibilidade digital está em todos os lugares!
+
+hoje eu participo de um projeto de implementação de uma aplicação e como o pessoal do design deve saber
+são varias rodadas de idas e vindas pra aprovação do design e o inicio do desenvolvimento
+ja na primeira rodada na tela principal tinhamos 4 icones sem label
+na tua opinião, como no caso do app do paypal, tu não acha que hoje o pessoal do design tem abusado de minimalismo e talvez dessa percepção 
+de que o usuário vai saber pra que serve o botão dada uma possivel experiencia prévia de navegação que nem sempre conhecemos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
