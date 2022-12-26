@@ -1,8 +1,0 @@
-10.4.2.135/26
-
-1. Quantidade de BITs, emprestados da parte de Host?
-2. Quantidade de BITs, sobraram na parte de Host?
-3. Quantidade de Sub Redes?
-4. Quantidade de IPs válidos por Sub Rede ou Rede?
-5. Máscara no formato decimal?
-6. O IP dado é de: (Rede/Sub Rede) (Broadcast)(Host)
