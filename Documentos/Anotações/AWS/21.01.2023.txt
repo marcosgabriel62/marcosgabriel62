@@ -1,0 +1,19 @@
+amazon redshift
+serviço de datawarehouse
+análise de big data
+dados de muitas fontes
+
+aws database migration service (aws dms)
+migração de bancos de dados relacionais e não relacionais e outros tipos de 
+armazenamento de dados
+migração entre bancos de dados locais ou na nuvem para outros bancos de dados
+teste de aplicativos sem afetar usuarios em produção
+combinação de bancos de dados 
+envio de cópias para outras fontes em vez de fazer uma migração unica
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+vpc - rede e ips privados com subredes
+deploy de recursos
+nada entra e sai sem autorização
+
+internet gateway - porta de acesso de ambiente externo para ambiente interno
+
+virtual private gateway - 
+
+sub net publica e subnet privada 
+
+pacotes são controlados por network acl ou lista de controle de acesso a rede
+são como um funcionario da imigração de um aeroporto
+
+grupos de segurança: permissão de acesso a uma instancia dentro de uma subnet
+
+grupo de segurança: stateful: tem memoria 
+network acl: stateless: não possui memoria 
+
+o pacote não é aberto nunca. somente é verificado o remetente e se o mesmo tem permissão 
+para enviar pacotes
+
+padrão de trafego de retorno
+
+subrede publica: instancias ec2
+subrede privada: bancos de dados
+
+amazon cloudfront: disponibilizam conteudo o mais proximo dos clientes
+
+route 53: serviço de dns
+
+instance store - armazenamento local 
+no interrompimento da instancia você perde os dados que estavam no armazenamento
+
+volumes do ebs = dados persistem entre interrupções 
+cliente define tamanho e tipo
+é associado a instancias ec2
+snapshots são backups 
+
+amazon s3
+nuvem como google drive e onedrive
+armazenado em buckets (diretorios)
+buckets podem ser de até 5tb 
+diferentes permissões de edição, exclusão e acesso
+pode ser usado para hospedagem de sites estaticos 
+
+s3 ia
+pode ser usado para armazenamento de dados com pouco acesso mas que exigem rapidez quando necessário
+
+s3 glacier
+pode ser usado para armazenamento de dados que podem esperar para serem recuperados 
+pode ser movidos os documentos para o glacier
+
+Podem ser criados politicas de armazenamento carregando arquivos conforme tempo em cada s3 
+para outras categorias do s3.
+
+S3 vs EBS
+
+EBS: amazon elastic block store
+armazenamento em blocos
+Até 16tb
+sobrevive a descarte das instancias ec2
+ssd por padrão mas pode ser também hdd
+permite edição de arquivos unicos e somente aqueles blocos editados
+seriam atualizados na nuvem
+
+
+s3: amazon simple store service
+armazenamento ilimitado
+objetos individuais de até 5tb
+escreve uma vez e lê várias
+99.9999999999% de durabilidade
+habilitado para web
+é seu proprio backup
+
+EFS - Elastic file system
+Sistema de arquivos compartilhado e gerenciado
+
+Amazon EBS são volumes associados ao ec2 e e alocado na zona de disponibilidade
+Não é elastico, você precisa contratar manualmente mais armazenamento
+
+Amazon EFS são multiplas intancias lendo e escrevendo simultaneamente
+Sistema de arquivos para linux
+Recurso regional
+Escalavel automaticamente
+
+Amazon Relation Database System ou RTBIS 
+Sistema de banco de dados relacional SQL
+Amazon RDS ou Relational Database Service
+permite executar praticamente todos os bancos de dados relacionais do mercado
+Amazon Aurora: banco de dados Amazon (compativel com Mysql ou PostgreeSql)
+6 cópias da mesma informação
+Amazon Dynamo DB: Banco de dados não relacional NoSQL
+DynamoDB é serverless e autoscalling
+
+
+
+
+
+
+

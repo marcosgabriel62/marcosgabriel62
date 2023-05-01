@@ -1,0 +1,53 @@
+provisionamento de carga de trabalho
+tudo falha o tempo todo então planeje pensando nas falhas e nada falhará
+
+uma instancia maior nem sempre é o que se faz necessário 
+as vezes precisamos de mais instancias
+ajuste de carga
+amazon ec2 auto scalling = a cada minuto do dia a quantidade certa de instâncias
+ao criar um grupo de auto scalling é possivel definir o minimo, a capacidade desejada e o 
+máximo de estâncias permitidas para aquela tarefa.
+não havendo especificação da capacidade desejada o auto scalling vai considerar como desejada
+a capacidade minima
+
+direcionamento de tráfego com elastic load balancing: como um direcionador de pessoas em uma
+fila de buffet
+balanceamento de carga
+load balance pode se usado tanto o seu próprio quanto o próprio da AWS porém o trabalho com
+o controle próprio é maior
+ELB - elastic load balance
+Escopo regional
+Custo por hora
+
+Sistemas de mensagens e filas
+arquiteturas acopladas tendem a ser pouco permissivas a falhas 
+arquiteturas desacopladas lidam bem com falhas
+Arquitetura de acoplamento flexivel: uma unica falha não causará erros em cascata
+Amazon SQS or Simple Queue service 
+Amazon SNS or Simple Notification Service
+Carga util:Dados contidos na mensagem ou requisição
+Filas do Amazon SQS: Onde as mensagens são colocadas até serem processadas
+AWS gerencia a estrutura para mantenimento das filas
+SNS tem diversas funções de notificações sobre uma mensagem ter sido processada com sucesso
+
+Serverless: Você não pode acessar ou ou ver a infraestrutura adjacente
+Você só precisa focar na sua aplicação, não precisa se preocupar com o resto
+AWS Lambda: Codigo é executado conforme gatilho altamente escalavel e disponivel
+Executa codigos de até 15 minutos, serviços rapidos, backend de curtas solicitações
+Amazon Elastic Container Services ECS: Serviço de container docker da amazon
+Amazon Elastic Kubernets Services EKS: Também serviço de container docker mas usa ferramentas
+e tem caracteristicas diferentes
+são usados em instancias na EC2 
+
+Se você precisa de acesso total ao sistema operacional: Instancias EC2
+Se você precisa de processamentos de curta duração, Orientados por gatilhos, não deseja
+gerenciar o ambiente: AWS lambda
+Se você deseja executar workloads primeiro precisa escolher sua ferramenta de orquestração
+de containers: ECS ou EKS
+Você prefere que você mesmo gerencie as estancias usando EC2 e servidores ou prefere 
+usar a aplicação serverless fargate?
+
+tolerancia a falhas + alta disponibilidade = infraestrutura espalhada pelo globo
+
+
+

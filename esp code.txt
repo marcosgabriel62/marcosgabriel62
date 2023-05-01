@@ -1,0 +1,85 @@
+#include "pitches.h"
+
+const int BUZZZER_PIN = 13;
+const int PIN_TO_SENSOR = 19; // GIOP19 pin connected to OUTPUT pin of sensor
+int pinStateCurrent   = HIGH;  // current state of pin
+int pinStatePrevious  = HIGH;  // previous state of pin
+
+int melodyMotionAlarm[] = {
+  NOTE_C4, NOTE_G3
+};
+
+int melodyGLPAlarm[] = {
+  NOTE_A1, NOTE_D2, NOTE_B0, NOTE_B1, 0, NOTE_E1, NOTE_A3, NOTE_G1, NOTE_G2
+};
+
+int melodyCO2Alarm[] = {
+  NOTE_C4, NOTE_G3
+};
+
+int noteDurations[] = {
+  4, 4, 4, 3, 3, 3, 3, 4, 4
+}
+
+void setup() {
+  Serial.begin(9600);            // initialize serial
+  pinMode(PIN_TO_SENSOR, INPUT); // set ESP32 pin to input mode to read value from OUTPUT pin of sensor
+}
+
+void motionAlarm()
+    {
+       for (int i=0; i<10; i++)
+          {
+            for (int thisNote = 0; thisNote < 2; thisNote++) 
+               {
+                  int noteDuration = 300 / noteDurations[thisNote];
+                  tone(BUZZZER_PIN, melodyMotionAlarm[thisNote], noteDuration);
+                  int pauseBetweenNotes = noteDuration * 1.00;
+                  delay(pauseBetweenNotes);
+                }
+          }
+    }
+
+void GLPAlarm()
+    {
+       for (int i=0; i<3; i++)
+          {
+            for (int thisNote = 0; thisNote < 9; thisNote++) 
+               {
+                  int noteDuration = 1000 / noteDurations[thisNote];
+                  tone(BUZZZER_PIN, melodyGLPAlarm[thisNote], noteDuration);
+                  int pauseBetweenNotes = noteDuration * 1.30;
+                  delay(pauseBetweenNotes);
+                }
+          }
+    }
+
+void CO2Alarm()
+    {
+       for (int i=0; i<10; i++)
+          {
+            for (int thisNote = 0; thisNote < 2; thisNote++) 
+               {
+                  int noteDuration = 300 / noteDurations[thisNote];
+                  tone(BUZZZER_PIN, melodyCO2Alarm[thisNote], noteDuration);
+                  int pauseBetweenNotes = noteDuration * 1.00;
+                  delay(pauseBetweenNotes);
+                }
+          }
+    }
+
+void loop() 
+    {
+        pinStatePrevious = pinStateCurrent; // store old state
+        pinStateCurrent = digitalRead(PIN_TO_SENSOR);   // read new state
+      
+        if (pinStatePrevious == LOW && pinStateCurrent == HIGH) 
+          {   // pin state change: LOW -> HIGH
+            Serial.println("Motion detected!");
+            GLPAlarm();
+            noTone(BUZZZER_PIN);
+          }else
+              if (pinStatePrevious == HIGH && pinStateCurrent == LOW) {   // pin state change: HIGH -> LOW
+              Serial.println("Motion stopped!");
+          }
+      }   
