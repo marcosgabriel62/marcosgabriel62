@@ -1,0 +1,8 @@
+Quais são as vantagens e as desvantagens de usar uma máquina virtual?
+
+Vejo como vantagem usar uma vm a possibilidade de explorar diferentes sistemas operacionais sem a burocracia de ter de monta-los em uma maquina fisica e repetir o processo quando
+for necessário o uso de outro sistema.
+
+Há também a possibilidade de salvar o estado e continuar exatamente de onde você parou, possibilidade que não existe se estivermos falando de uma maquina fisica por exemplo.
+
+Apesar de um ambiente de vm não ter a mesma velocidade de um sistema operacional de fato instalado para as tarefas realizadas na disciplina é plenamente suficiente.
