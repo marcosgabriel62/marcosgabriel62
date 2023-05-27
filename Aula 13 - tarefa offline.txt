@@ -1,0 +1,10 @@
+Aula 13 - tarefa offline
+
+* o que são redes neurais
+
+* o que significa treinar uma rede?
+Treinar significa criar um modelo para que a rede possa classificar e predizer de forma correta as informações submetidas a ela.
+
+* quais aplicações são beneficiadas por este tipo de abordagem?
+
+* na sua opinião, a IA oferece risco para a humanidade? Justifique sua resposta.
