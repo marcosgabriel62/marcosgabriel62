@@ -1,0 +1,5 @@
+Por que é preferivel usar SSH e não Telnet para conexões remotas?
+
+Por que a nivel de pacote quando você usa o telnet você deixa dados de login e senha expostos a pessoas que possam estar utilizando um analisador de pacotes como o caso do nosso teste
+com o wireshark. Quando você usa SSH você criptografa os dados de login e senha de tal forma que mesmo se uma pessoa estiver analisando os pacotes ela não vai conseguir fazer nada
+com a informação

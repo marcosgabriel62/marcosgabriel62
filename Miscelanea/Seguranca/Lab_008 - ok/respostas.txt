@@ -1,0 +1,20 @@
+O que é o Nmap? Nmap é uma ferramenta de exploração de rede e segurança / port scanner
+
+O nmap é usado para? O Nmap é usado para escanear uma rede e determinar os hosts e serviços disponíveis oferecidos na rede. Alguns dos recursos do nmap incluem detecção de host, varredura de porta e detecção de sistema operacional. 
+
+Qual é o comando nmap usado? O Nmap pode ser comumente usado para auditorias de segurança, para identificar portas abertas, inventário de rede e encontrar vulnerabilidades na rede.
+
+O que faz o parâmetro-A? -A: Habilitar detecção de SO, detecção de versão, varredura de script e traceroute
+
+O que faz o parâmetro -T4? 
+
+-T4 para execução mais rápida, proibindo o atraso de varredura dinâmica de exceder 10 ms para portas TCP. 
+-T4 é recomendado para uma conexão de banda larga ou ethernet decente.
+
+O Nmap é uma ferramenta poderosa para exploração e gerenciamento de redes. Como o Nmap pode ajudar na segurança da rede? Como o Nmap pode ser usado por um agente de ameaça como uma ferramenta nefasta?
+
+O Nmap pode ser usado para varrer uma rede interna em busca de portas abertas específicas para identificar a extensão de uma violação de segurança. 
+
+Ele também pode ser usado para inventariar uma rede para garantir que todos os sistemas sejam provavelmente corrigidos contra problemas de segurança. 
+
+Por outro lado, o nmap pode ser usado para reconhecimento para determinar portas abertas e outras informações sobre a rede.

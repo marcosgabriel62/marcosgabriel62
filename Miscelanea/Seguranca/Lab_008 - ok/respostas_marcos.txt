@@ -1,0 +1,87 @@
+O que é o Nmap?
+
+Ferramenta de exploração e segurança de redes / escaner de portas
+
+O nmap é usado para?
+
+É uma ferramenta de código fonte aberto para exploração de redes e auditoria de segurança. Muitos sistemas e operadores destes sistemas utilizam também o Nmap para tarefas de rotina como inventario de rede fazendo agendamentos e coordenando atualizações.
+
+Foi projetada para escanear rapidamente grandes redes bem como pequenas também sendo capaz de identificar os computadores da rede fornecendo uma lista, escanear quais portas estão abertas, saber quais são os sistemas operacionais destes hosts conectados a rede, saber quais serviços de rede como filtros e firewalls estão em uso e detectar características de hardware de dispositivos na rede.
+
+Veja o exemplo 1. Qual é o comando nmap usado?
+
+O comando usado e o comando SCAN
+
+O que faz o parâmetro-A?
+
+Habilita detecção de sistema operacional, versão, escanier de scripts e rastreamento de rota.
+
+O que faz o parâmetro -T4?
+
+Habilita a execução rápida 
+
+Quais portas e serviços são abertos?
+
+porta 22 - tcp ssh
+porta 23 - tcp telnet
+
+Para cada uma das portas abertas, grave o software que está fornecendo os serviços.
+
+porta 22 Open SSH 8.2
+porta 23 Openwall GNU/*/Linux telnetd
+
+O que é o sistema operacional?
+Firmware ou sistema que controla o hardware de hosts, switchs, roteadores e etc.
+
+Grave a IP endereço e máscara de sub-rede para sua VM. Qual rede pertence o seu VM?
+10.0.2.15 / 255.255.255.0 / 10.0.2.255
+
+Quantos hosts são acima?
+5 hosts 
+
+De seus resultados do Nmap, liste os endereços IP dos hosts que estão na mesma LAN como sua VM. Lista de 
+alguns dos serviços que estão disponíveis nos hosts detectados
+Apenas 1 host de 256 ips disponíveis
+21/tcp - ftp
+22/tcp - ssh
+23/tcp - telnet
+
+Revise os resultados e responda às perguntas a seguir.
+
+Quais portas e serviços estão abertos?
+22/tcp ssh
+80/tcp open http
+9929/tcp open nping-echo Nping echo
+31337/tcp open tcpwrapped
+
+Quais portas e serviços são filtrados?
+25/tcp filtered smtp
+135/tcp filtered msrpc
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+
+Qual é o endereço IP do servidor?
+45.33.32.156
+
+Qual é o sistema operacional?
+Linux
+
+Como o Nmap pode ajudar a proteger as redes
+
+identificando hosts e serviços: Você pode usar o Nmap para identificar quais dispositivos estão conectados a uma rede e quais serviços estão sendo executados nesses dispositivos. Essas informações são úteis para detetar dispositivos não autorizados ou serviços desnecessários que podem representar um risco à segurança.
+
+Mapeamento de portas: o Nmap pode identificar quais portas estão abertas em um dispositivo provendo informações sobre possíveis vulnerabilidades. Os administradores de rede podem usar essas informações para desabilitar portas desnecessárias ou corrigir vulnerabilidades conhecidas.
+
+Detecção de firewall: o Nmap pode ajudar a detetar a presença de firewalls ou filtros de pacotes na rede. Isso permite que os administradores de rede avaliar a eficácia políticas de segurança aplicadas.
+
+Verificação de conformidade: o Nmap pode ser usado para verificar se os sistemas na rede estão em conformidade com políticas de segurança estabelecidas. Pode identificar dispositivos obsoletos configuração incorreta ou serviço não autorizado.
+
+O Nmap também pode ser usado como uma ferramenta nefasta por pessoas mal intencionadas. Abaixo estão algumas situações onde o Nmap pode ser usado para o mal:
+
+Reconhecimento de alvo: Os agentes de ameaças podem usar o Nmap para mapear redes e identificar dispositivos vulneráveis.
+
+Identificação de vulnerabilidade: o Nmap pode ser usado para identificar serviços desatualizados ou mal configurados que podem ser explorados.
+
+Disfarçar atividades maliciosas: o Nmap possui recursos avançados, como falsificação de endereços IP, que podem ajudar os agentes de ameaças a ocultar sua identidade ou lançar ataques do local errado, dificultando a rastreabilidade.
+
+Criação de botnet: os agentes de ameaças podem usar o Nmap para identificar hosts vulneráveis ​​e adicioná-los a um botnet, uma rede de dispositivos infectados que são controlados remotamente para executar atividades maliciosas, como ataques de negação de serviço (DDoS).

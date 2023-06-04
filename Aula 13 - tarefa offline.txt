@@ -1,10 +1,14 @@
 Aula 13 - tarefa offline
 
 * o que são redes neurais
+Uma rede neural é um método de inteligência artificial que ensina computadores a processar dados de uma forma inspirada pelo cérebro humano.
+O princípio básico das redes neurais é, como dito acima, uma simulação de neurônios conduzindo informações em um cérebro humano. Uma rede neural tem, necessariamente, uma camada de entrada, uma de saída e, entre elas, uma camada oculta — que tem esse nome apenas por não ser uma camada de entrada ou de saída.
 
 * o que significa treinar uma rede?
 Treinar significa criar um modelo para que a rede possa classificar e predizer de forma correta as informações submetidas a ela.
 
 * quais aplicações são beneficiadas por este tipo de abordagem?
+Reconhecimento de fala e imagem, reconhecimento de imagem, visão computacional, sistemas que identificam padrões, gerenciamento de dados, robôs autônomos, veículos ou sistemas embarcados de controle autonomo ou semi autonomo.
 
 * na sua opinião, a IA oferece risco para a humanidade? Justifique sua resposta.
+Não acho que a IA ofereça risco a humanidade desde que num futuro proximo se estabelesçam limites sobre o poder e a extensão da capacidade de inteligências artificiais na tomada de decisões criticas. Todos sabemos que a SKYNET dominou o mundo por que teve alcance e gerecenciamento sem limites de todo o poderio bélico estadunidense e é justamente isso que devemos temer. 
