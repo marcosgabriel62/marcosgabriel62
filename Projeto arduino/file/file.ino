@@ -159,7 +159,7 @@ void Waiting(int time){
 
 void firstStart(){
     Serial.println("Warming up the sensors.");
-    Waiting(1500);
+    Waiting(1900);
     Serial.println("Sensors OK! Ready to go! Motion sensor turned of by default");
 }
     

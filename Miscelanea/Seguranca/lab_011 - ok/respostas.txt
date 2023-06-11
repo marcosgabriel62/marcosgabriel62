@@ -1,0 +1,19 @@
+O que você percebeu sobre a URL deste site?
+
+A URL desse site possui o cadeadinho e é HTTPS ou seja, possui criptografia na conexão.
+
+O que substituiu a sessão HTTP da captura anterior?
+
+Conforme print Transport Layer Security juntamente de Encrypted Application Data
+
+Os dados da aplicação são legíveis?
+
+Não, os dados da aplicação não são legíveis 
+
+Quais as vantagens de se usar HTTPS ao invés de HTTP?
+
+Como grande vantagem temos a segurança de que mesmo que alguem esteja interceptando os pacotes nada vai conseguir fazer com eles já que tendo em vista que estão criptografados 
+o agente malicioso não vai conseguir ler nenhum tipo de informação sensível deles.
+
+Todos os sites que usam https são considerados confiaveis?
+Não, nem todos os sites que usam https podem ser considerados confiaveis. Agentes maliciosos comumente usam https também.
