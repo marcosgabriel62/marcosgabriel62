@@ -10,7 +10,13 @@ nome do banco dados   = base_teste_sql_injection
 
 assim a pagina de conexão deve ser capaz de se conectar com o banco
 
-além disso você deve criar uma tabela usuário com colunas login e senha para que seja possivel testar entrar no sistema com um usuário autêntico.
+além disso você deve criar uma tabela conforme instruções abaixo:
+
+nome da tabela = usuario
+nome da coluna 1 = email
+nome da coluna 2 = senha
+
+É necessário incluir alguns dados na tabela para que seja possivel testar entrar no sistema com um usuário autêntico.
 
 O objetivo do exercicio é verificar que é possivel fazer login na aplicação sem informar a senha certa do usuario usando o script malicioso
 teoricamente só poderia se logar o usuario que colocar sua senha corretamente porém por não haver tratamento nos dados quando fazemos a consulta no banco de dados 
