@@ -24,4 +24,6 @@ todos os dados usados até o momento podem ser editados desde que em código voc
 O objetivo do exercicio é verificar que é possivel fazer login na aplicação sem informar a senha certa do usuario usando o script malicioso
 teoricamente só poderia se logar o usuario que colocar sua senha corretamente porém por não haver tratamento nos dados quando fazemos a consulta no banco de dados 
 o mesmo permite a inserção de um script malicioso que permite o usuario fazer login sem a senha.
+A pagina também tem uma opção de login protegido que trata o campo de senha para que o mesmo não seja interpretado como um comando sql
+é possivel ver essa diferença pois a senha usada pelo usuário é informada na pagina acesso liberado ou negado
 
