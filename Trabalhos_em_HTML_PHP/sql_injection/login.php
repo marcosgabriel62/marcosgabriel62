@@ -14,7 +14,7 @@ if (isset ($_POST["submetido"])) {
     } else {
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $_SESSION['usuario'] = $email;
+        $_SESSION['senha'] = $password;
     }
 
     # Monta a query de busca
@@ -36,7 +36,7 @@ if (isset ($_POST["submetido"])) {
     <body>
         <div class="container">
             <form style="text-align: center;" action="login.php" method="post">
-                <h1 style="text-align: center;">Sistema de login para teste de<br>SQL INJECTION </h1>
+                <h1 style="text-align: center;">Sistema de login para teste de<br>SQL INJECTION: Login não imune a SQLi </h1>
                 <b>Usuario:</b><br>
                     <input type="email" name="email" required="required"/>
                 <br>
@@ -49,7 +49,8 @@ if (isset ($_POST["submetido"])) {
                 <input type="checkbox" name="remember_me" value="Remember me"/>
                 <br>
                 <br>
-                <input type=submit name="submetido" value="OK"></form>
+                <input type=submit name="submetido" value="OK">
+                <br><br><a href="http://localhost/login_imune.php">Ir para imune?</a>
             </form>
         </div>
     </body>
