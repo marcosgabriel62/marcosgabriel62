@@ -1,0 +1,7 @@
+tipo=input("Digite o que quiser: ")
+print (type (tipo))
+print ('é tudo maiusculo? {}'.format(tipo.isupper()))
+print ('é um numero ou letra? {}'.format(tipo.isalnum()))
+print ('é tudo letra? {}'.format(tipo.isalpha()))
+print ('é decimal? {}'.format(tipo.isdecimal()))
+print ('é tudo minusculo? {}'.format(tipo.islower()))
