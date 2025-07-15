@@ -1,0 +1,5 @@
+nomecompleto=input('Digite seu nome: ')
+nomedividido=nomecompleto.split(' ')
+qtdnomes=nomecompleto.count(' ')
+print('Primeiro nome: {} '.format(nomedividido[0]))
+print('Ultimo nome: {}'.format(nomedividido[qtdnomes]))
